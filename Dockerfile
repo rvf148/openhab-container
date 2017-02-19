@@ -17,6 +17,5 @@ VOLUME ${APPDIR}/conf ${APPDIR}/userdata ${APPDIR}/addons
 # Execute command
 WORKDIR ${APPDIR}
 EXPOSE 8080 8443 8101
-COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["gosu", "openhab", "./start.sh"]
